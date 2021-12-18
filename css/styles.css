@@ -504,6 +504,25 @@ color:var(--first-text-color);
     display: block;
 }
 
+.wrapper-image{
+position: relative;
+}
+.wrapper-image p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(33, 150, 243 , 0.9);
+    height: 100%;
+    width: 100%;
+padding: 63px 24px;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: calc(28 / 18) ;
+letter-spacing: 0.03em;
+color:var(--third-text-color) ;
+}
 
 
 
