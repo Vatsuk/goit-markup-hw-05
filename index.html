@@ -22,8 +22,8 @@ rel="stylesheet"
 <nav class="header-navigation">
             <a class="site-logo link logo ">Web<span class="logo-second ">Studio</span></a>
        <ul class="header-list list">
-    <li class="header-item"><a href=""class="header-link link current">Студия</a></li>
-    <li class="header-item"><a href="./portfolio.html"class="header-link link ">Портфолио</a></li>
+    <li class="header-item"><a href=""class="header-link link current  ">Студия</a></li>
+    <li class="header-item"><a href="./portfolio.html"class="header-link link  ">Портфолио</a></li>
     <li class="header-item"><a href=""class="header-link link">Контакты</a></li>
 
 </ul>   
@@ -45,7 +45,7 @@ rel="stylesheet"
 <main>
     <section class="hero">
         <h1 class="hero-title">Эффективные решения <br>для вашего  бизнеса</h1>
-        <button class="hero-btn" type="button">Заказать услугу</button>
+        <button data-modal-open class="hero-btn" type="button">Заказать услугу</button>
     </section>
     <section class="services section services">
         <h2 class="visually-hidden">#</h2> 
@@ -348,5 +348,13 @@ rel="stylesheet"
 </div>
 </div>
 </footer>
+<div class="backdrop is-hidden"data-modal>
+<div class="wrapper-modal">
+    <form class="form">
+    <button  type="button" data-modal-close class="close">&#10006;  </button>
+    </form>
+</div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>

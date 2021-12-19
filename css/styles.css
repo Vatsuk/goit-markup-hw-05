@@ -1,4 +1,4 @@
-:root {
+    :root {
     --main-title-color: #212121;
     --first-text-color: #757575;
     --third-text-color:#FFFFFF;
@@ -506,6 +506,7 @@ color:var(--first-text-color);
 
 .wrapper-image{
 position: relative;
+overflow: hidden;
 }
 .wrapper-image p{
     position: absolute;
@@ -516,19 +517,81 @@ position: relative;
     width: 100%;
 padding: 63px 24px;
 font-family: Roboto;
-font-size: 18px;
+font-size: 17px;
 font-style: normal;
 font-weight: 400;
-line-height: calc(28 / 18) ;
+line-height: calc(28 / 17) ;
 letter-spacing: 0.03em;
 color:var(--third-text-color) ;
+transform: translateY(101%);
+transition:transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
+
+}
+.port-item a{
+    display: block;
+}
+.port-item a:hover .wrapper-image p{
+transform: translateY(0);
 }
 
+.wrapper-modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    padding: 40px;
+    background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+ 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+max-width: 528px;
+width: calc(100% - 30px);
+max-height: 581px;
+height:calc(100% - 30px);
+overflow-y: auto;
+position: relative;
+}
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
 
-
-
-
-
+}
+.close:hover{
+    color: #2196F3;
+}
+.header-link.active::after{
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   content:"";
+   height: 4px;
+border-radius: 50%;
+border-color: var(--accent-color);   
+}
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
 
 
 
